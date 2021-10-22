@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+<!-- login 관련 html 코드 출처 : https://dheldh77.tistory.com/entry/Django-%ED%9A%8C%EC%9B%90%EA%B0%80%EC%9E%85-%EA%B8%B0%EB%8A%A5-%EB%A7%8C%EB%93%A4%EA%B8%B0 -->
+
+<form method="post" action="{% url 'signup' %}">
+    {% csrf_token %}
+    <p>username</p>
+    <input type="text" name="username">
+    <br>
+    <p>password</p>
+    <input type="password" name="password">
+    <p>confirm</p>
+    <input type="text" name="confirm">
+    <br>
+    <input type="submit"value="회원가입">
+</form>
