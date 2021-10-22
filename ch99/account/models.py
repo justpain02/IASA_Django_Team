@@ -8,10 +8,10 @@ from .validators import validate_email, validate_password
 # Create your models here.
 
 class User(models.Model):
-    user_id = models.CharField(max_length=32, unique=True)
-    user_pw = models.CharField(max_length=128, validators=[validate_password])
-    user_name = models.CharField(max_length=16, unique=True)
-    user_email = models.EmailField(max_length=50, validators=[validate_email])
-    created_at = models.DateTimeField(auto_now_add = True)
-    updated_at = models.DateTimeField(auto_now=True)
-    
+    user_id = models.CharField(max_length=32, unique=True, verbose_name='유저 아이디')
+    user_pw = models.CharField(max_length=128, validators=[validate_password], verbose_name='유저 비밀번호')
+    user_name = models.CharField(max_length=16, unique=True, verbose_name='유저 이름')
+    user_email = models.EmailField(max_length=50, validators=[validate_email], verbose_name='유저 이메일')
+    created_at = models.DateTimeField(auto_now_add = True, verbose_name='계정 생성일')
+    updated_at = models.DateTimeField(auto_now=True, verbose_name='계정정보 수정일')
+
