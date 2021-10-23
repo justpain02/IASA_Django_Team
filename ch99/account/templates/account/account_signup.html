@@ -4,11 +4,16 @@
 
 <form method="post" action="{% url 'signup' %}">
     {% csrf_token %}
-    <p>username</p>
-    <input type="text" name="username">
+    <p>userid</p>
+    <input type="text" name="user_id">
     <br>
+    <p>username</p>
+    <input type="text" name="user_name">
+    <br>
+    <p>email</p>
+    <input type="text" name="user_email">
     <p>password</p>
-    <input type="password" name="password">
+    <input type="password" name="user_pw">
     <p>confirm</p>
     <input type="text" name="confirm">
     <br>

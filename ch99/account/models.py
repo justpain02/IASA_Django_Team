@@ -15,3 +15,10 @@ class User(models.Model):
     created_at = models.DateTimeField(auto_now_add = True, verbose_name='계정 생성일')
     updated_at = models.DateTimeField(auto_now=True, verbose_name='계정정보 수정일')
 
+    def __str__(self):
+        return self.user_name
+    
+    class Meta:
+        db_table = 'user'
+        verbose_name = '유저'
+        verbose_name_plural = '유저'
