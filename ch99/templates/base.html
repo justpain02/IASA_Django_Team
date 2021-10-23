@@ -5,9 +5,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>IASA Game Mainpage</title>
+    <title>{% block title %}IASA Game Mainpage{% endblock %}</title>
 </head>
 <body>
-    
+    <p>Hello world!</p>
+    <div class="container">
+        {% block content %}{% endblock %}
+    </div>
 </body>
 </html>
