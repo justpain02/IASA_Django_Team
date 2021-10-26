@@ -20,6 +20,7 @@ from mysite.views import UserCreateView, UserCreateDoneTV
 from django.conf.urls.static import static
 from django.conf import settings
 
+
 urlpatterns = [
     path('admin/', admin.site.urls),
     #shkim
@@ -28,5 +29,5 @@ urlpatterns = [
     path('accounts/register/', UserCreateView.as_view(), name='register'),
     path('accounts/register/done/', UserCreateDoneTV.as_view(), name='register_done'),
     path('', HomeView.as_view(), name='home'),
-    # path('accounts/profile', )
+    path('accounts/profile/', include('profiles.urls')),
 ] + static(settings.MEDIA_URL, document_root = settings.MEDIA_ROOT)
