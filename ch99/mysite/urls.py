@@ -26,4 +26,5 @@ urlpatterns = [
     path('accounts/register/', UserCreateView.as_view(), name='register'),
     path('accounts/register/done/', UserCreateDoneTV.as_view(), name='register_done'),
     path('', HomeView.as_view(), name='home'),
+    path('chat/', include('chat.urls'))
 ]
