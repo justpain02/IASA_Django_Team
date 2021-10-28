@@ -1,8 +1,9 @@
 from django.conf.urls import url, include
 from django.contrib import admin
 from django.urls import path
-from .views import HomepageView
+from . import views
 
 urlpatterns = [
-    path('', HomepageView.as_view(), name='chat_home'),
+    path('', views.index, name='chat_home'),
+    path('<str:room_name>/', views.room, name='chat_room'),
 ]
