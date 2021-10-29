@@ -138,3 +138,8 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 LOGIN_REDIRECT_URL = '/' # 이거 있어야 로그인 끝나고 프로필 화면으로 넘어가지 않는다
 
 ASGI_APPLICATION = 'mysite.asgi.application'
+CHANNEL_LAYERS = {
+    'default': {
+         "BACKEND": "channels.layers.InMemoryChannelLayer" # InMemoryChannelLayer 사용
+    }
+}
