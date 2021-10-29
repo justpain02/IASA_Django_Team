@@ -5,6 +5,7 @@ from django.conf import settings
 from .views import *
 
 urlpatterns = [
-    path('', Gamelist.as_view(), name='list'),
+    path('', GamelistView.as_view(), name='list'),
     path('mainpage/', MainpageView.as_view(), name='maingamepage'),
+    path('add/', NewroomView.as_view(), name='Add'),
 ]

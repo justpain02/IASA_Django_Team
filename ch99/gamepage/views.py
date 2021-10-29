@@ -12,6 +12,11 @@ class MainpageView(TemplateView):
     template_name = 'gamepage/maingamepage.html'
 
 
-class Gamelist(ListView):
+class GamelistView(ListView):
     model = Game
 
+class NewroomView(CreateView):
+    model = Game
+    fields=['room_name', 'leader_name', 'people_num']
+    success_url = reverse_lazy('list')
+    template_name_suffix='_newroom'
