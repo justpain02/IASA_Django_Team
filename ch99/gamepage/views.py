@@ -20,3 +20,7 @@ class NewroomView(CreateView):
     fields=['room_name', 'leader_name', 'people_num']
     success_url = reverse_lazy('list')
     template_name_suffix='_newroom'
+
+class ReadypageView(TemplateView):
+    template_name = 'gamepage/readypage.html'
+

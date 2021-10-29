@@ -6,6 +6,7 @@ from .views import *
 
 urlpatterns = [
     path('', GamelistView.as_view(), name='list'),
-    path('mainpage/', MainpageView.as_view(), name='maingamepage'),
-    path('add/', NewroomView.as_view(), name='Add'),
+    path('mainpage/<int:pk>/', MainpageView.as_view(), name='maingamepage'),
+    path('add/', NewroomView.as_view(), name='add'),
+    path('ready/<int:pk>/', ReadypageView.as_view(), name='ready'),
 ]
