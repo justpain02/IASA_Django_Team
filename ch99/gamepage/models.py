@@ -3,9 +3,14 @@ from django.urls import reverse
 
 # Create your models here.
 class Game(models.Model):
-    room_name = models.CharField('TiTLE',max_length=30)
-    leader_name = models.CharField('TiTLE',max_length=30)
-    people_num = models.IntegerField('TiTLE',max_length=30)
+    room_name = models.CharField('방 이름',max_length=30)
+    leader_name = models.CharField('방장',max_length=30)
+    people_num = models.IntegerField('사람수', default=0)
     
     def get_absolute_url(self):
         return reverse('list')
+
+    @property
+    def update(self):
+        self.people_num=self.people_num +1
+        self.save()
