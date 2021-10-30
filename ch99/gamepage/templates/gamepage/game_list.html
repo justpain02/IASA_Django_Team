@@ -20,7 +20,7 @@
                     <td>{{Game.room_name}}</td>
                     <td>{{Game.leader_name}}</td>
                     <td>{{Game.people_num}}</td>
-                    <td><a href="##">참여하기</a></td>
+                    <td><a href="{% url 'ready' pk=Game.id %}">참여하기</a></td>
                 </tr>
             {% empty %}
                 <li>아직 방이 없어요 방을 생성해보세요.</li>

@@ -9,6 +9,7 @@ from .models import Game
 
 #--- TemplateView
 class MainpageView(TemplateView):
+    model = Game
     template_name = 'gamepage/maingamepage.html'
 
 
@@ -22,5 +23,7 @@ class NewroomView(CreateView):
     template_name_suffix='_newroom'
 
 class ReadypageView(TemplateView):
+    model = Game
     template_name = 'gamepage/readypage.html'
+    
 
