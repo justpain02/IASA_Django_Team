@@ -15,3 +15,6 @@ class Game(models.Model):
     def update(self):
         self.people_num=self.people_num +1
         self.save()
+    
+    def __str__(self):
+        return self.title
