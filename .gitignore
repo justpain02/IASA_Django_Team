@@ -1,3 +1,8 @@
+<<<<<<< HEAD
 /media/*
 /venv
+=======
+/venv/*
+/media/*
+>>>>>>> 7bcc545046a10768c9869b9f2a27ed284361eeec
 *.pyc
