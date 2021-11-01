@@ -1,9 +1,15 @@
 {% extends 'base.html' %}
-
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 {% block content %}
-<textarea id="chat-log" cols="100" rows="20"></textarea><br>
+<!-- <textarea id="chat-log" cols="100" rows="20"></textarea><br>
 <input id="chat-message-input" type="text" size="100"><br>
-<input id="chat-message-submit" type="button" value="Send">
+<input id="chat-message-submit" type="button" value="Send"> -->
+<div style="width:800px; margin:0 auto;">username :
+    <a  id="username" href="">{{ user.get_username }}</a>
+    <textarea id="chat-log" cols="100" rows="20"></textarea><br/>
+   <input id="chat-message-input" type="text" size="75"/><br/>
+   <input id="chat-message-submit" type="button" value="Send"/>
+</div>
 {{ room_name|json_script:"room-name" }}
 <script>
     const roomName = JSON.parse(document.getElementById('room-name').textContent);
@@ -18,6 +24,9 @@
 
     chatSocket.onmessage = function(e) {
         const data = JSON.parse(e.data);
+        var message = data['message'];
+        console.log(e.data);
+
         document.querySelector('#chat-log').value += (data.message + '\n');
     };
 
