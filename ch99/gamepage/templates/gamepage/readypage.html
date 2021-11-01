@@ -4,6 +4,5 @@
     정답 : <input type="text" name="answer">
     <input type="submit">
 </form>
-<a href="{% url 'maingamepage' pk=Game.id %}" >시작하기</a>
-
+<a href="{% url 'maingamepage' pk=object.id %}" >시작하기</a>
 {% endblock %}
