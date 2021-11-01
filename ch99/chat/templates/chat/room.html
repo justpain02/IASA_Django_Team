@@ -5,7 +5,11 @@
 <input id="chat-message-input" type="text" size="100"><br>
 <input id="chat-message-submit" type="button" value="Send"> -->
 <div style="width:800px; margin:0 auto;">username :
+    {% if user.is_active %}
     <a  id="username" href="">{{ user.get_username }}</a>
+    {% else %}
+    <a  id="username" href="">Anonymous</a>
+    {% endif %}
     <textarea id="chat-log" cols="100" rows="20"></textarea><br/>
    <input id="chat-message-input" type="text" size="75"/><br/>
    <input id="chat-message-submit" type="button" value="Send"/>
