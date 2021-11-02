@@ -31,4 +31,5 @@ urlpatterns = [
     path('', HomeView.as_view(), name='home'),
     path('accounts/profile/', include('profiles.urls')),
     path('gamepage/', include('gamepage.urls')),
+    path('chat/', include('chat.urls')),
 ] + static(settings.MEDIA_URL, document_root = settings.MEDIA_ROOT)

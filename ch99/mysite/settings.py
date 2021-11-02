@@ -41,6 +41,8 @@ INSTALLED_APPS = [
     'widget_tweaks',
     'profiles',
     'gamepage',
+    'chat',
+    'channels',
 ]
 
 MIDDLEWARE = [
@@ -136,3 +138,5 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 LOGIN_REDIRECT_URL = '/' # 이거 있어야 로그인 끝나고 프로필 화면으로 넘어가지 않는다
+
+ASGI_APPLICATION = "core.routing.application"
