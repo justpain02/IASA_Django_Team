@@ -6,36 +6,39 @@
   <meta charset="UTF-8">
   <title>HTML Layouts</title>
   <style>
-    header {
-      background-color:lightgrey;
-      height:100px;
-      
-    }
+
     nav {
       background-color: #339999;
       color:white;
-      width:280px;
-      height: 340px;
+      width:500px;
+      height: 560px;
       float: left;
     }
+    
 
     section {
-      width: 200px;
-      text-align: left;
-      float: left;
-      padding: 10px;
+      background-color: red;
+      width: 805px;
+      float: right;
+
+      height: 280px;
 
     }
     footer {
-      background-color: white;
-      height: 100px;
+      background-color: yellow;
+      width: 805px;
+      float: left;
+
+      height: 280px;
       clear: both;
+      float: right;
     }
 
-    header,nav,section,footer {text-align: center;}
-    header,footer {line-height: 100px;}
+    nav,section,footer {text-align: center;}
+    footer {line-height: 100px;}
     nav,section {line-height: 240px;}
   </style>
+  
 </head>
 {% load static %}
 <head>
@@ -53,9 +56,7 @@
 
 
   <h1>행멘 게임페이지</h1>
-  <header>
-    <h2>HEADER 영역</h2>
-  </header>
+
 
   <nav>
     <img src="{% static 'hangman/images/hangman test.png' %}" alt="행맨 테스트 이미지" width="200">
