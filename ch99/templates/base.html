@@ -5,27 +5,45 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{% block title %}IASA Game Mainpage{% endblock %}</title>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
     {% block extra-style %}{% endblock %}
 </head>
+
 <body>
     <nav class="navbar navbar-light" style="background-color: rgb(157, 202, 163);">
         <form class="container-fluid justify-content-start">
             {% load static %}
             <img src="{% static 'base/images/img.jpg' %}" alt="hangman" width="150px">
-            <button style="margin-left: 10%; width: 13%;" class="btn btn-outline-success me-2" type="button">빠른 시작</button>
-            <button style="margin-left: 5%; width: 13%;" class="btn btn-outline-success me-2" type="button">게임 선택</button>
-            <button style="margin-left: 5%; width: 13%;" class="btn btn-outline-success me-2" type="button">마이페이지</button>
-            <button style="margin-left: 5%; width: 13%;" class="btn btn-outline-success me-2" type="button">로그인 창</button>
+            {% load static %}
+            <link rel="stylesheet" type="text/css" href="{% static 'base/css/button.css' %}">
+            <div class="button_1"><a href=#>빠른 시작</a></div>
+            <div class="button_1"><a href=#>게임 선택</a></div>
+            {% if user.is_active %}
+            <a><i class="fas fa-user"></i>&ensp;{% firstof user.get_short_name user.get_username %}&ensp;</a>
+            <div class="button_1"><a href="{% url 'logout' %}">Logout</a></div>
+            <div class="button_1"><a href="{% url 'password_change' %}">Change Password</a></div>
+            
+            
+            {% else %}
+            <a><i class="fas fa-user"></i>&ensp;anonymous&ensp;</a>
+            <div class="button_1"><a href="{% url 'login' %}">Login</a></div>
+            <div class="button_1"><a href="{% url 'register' %}">Register</a></div>
+            
+            
+            {% endif %}
+
+            
         </form>
   </nav>
-    <dif class="container bg-warning">
+    <dif>
         {% block content %}{% endblock %}
     </dif>
     {% block footer %}{% endblock %}
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+    
     {% block extra-script %}{% endblock %}
 
 </body>

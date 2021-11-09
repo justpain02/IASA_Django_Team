@@ -5,6 +5,18 @@
 {% block title %} Homepage {% endblock %}
 
 {% block content %}
-<p>Hello Python!</p>
+<html>
+<head>
+</head>
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'home/css/css.css' %}">
+<body>
+    <div class="main">
+        <div class="left-menu">사이드바</div>
+        <div class="article">게임 설명</div>
+        <div class="comment">코멘트</div>
+    </div>
 
+</body>
+</html>
 {% endblock %}

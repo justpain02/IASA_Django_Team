@@ -1,0 +1,21 @@
+.left-menu{
+	float: left;
+	width: 200px;
+	height: 700px;
+	border: 2px solid red;
+	background-color: #ffe7d5;
+}
+
+.article{
+	border: 2px solid blue;
+	background-color: #e2e9ff;
+	height: 700px;
+    width: 1903px;
+}
+
+.comment{
+	height: 150px;
+    width: 1903px;
+	border: 2px solid purple;
+	background-color: #ffddff;
+}
