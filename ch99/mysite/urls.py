@@ -20,6 +20,7 @@ from mysite.views import UserCreateView, UserCreateDoneTV
 from django.conf.urls.static import static
 from django.conf import settings
 
+app_name='posts'
 
 urlpatterns = [
     path('admin/', admin.site.urls),
