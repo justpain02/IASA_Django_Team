@@ -110,8 +110,18 @@
       <button id="test_btn1">x</button>
       <button id="test_btn1">y</button>
       <button id="test_btn1">z</button>
-    </div>
+      
+    </div>  
     </article2>
+  현재 인원수:
+  {{object.people_num.all.count}}
+  <a href="{% url 'join' Game_id=object.id %}">
+    {% if user in object.people_num.all %}
+    <i class="fas fa-heart">나가기</i>
+    {% else %}
+    <i class="far fa-heart">참여하기</i>
+    {% endif %}
+  </a>
 
 
   </section>  

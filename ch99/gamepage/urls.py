@@ -10,4 +10,5 @@ urlpatterns = [
     path('mainpage/<int:pk>/', MainpageView.as_view(), name='maingamepage'),
     path('add/', NewroomView.as_view(), name='add'),
     path('ready/<int:pk>/', ReadypageView.as_view(), name='ready'),
+    path('join/<int:Game_id>/', join ,name='join'),
 ]
