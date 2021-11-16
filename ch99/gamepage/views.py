@@ -21,7 +21,7 @@ class GamelistView(ListView):
 
 class NewroomView(CreateView):
     model = Game
-    fields=['room_name', 'leader_name', 'people_num']
+    fields=['room_name', 'leader_name']
     success_url = reverse_lazy('list')
     template_name_suffix='_newroom'
 
