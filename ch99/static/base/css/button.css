@@ -27,7 +27,7 @@ button{
 }
 button:hover{
   background:#fff;
-  color:#1AAB8A;
+  color:#616161;
 }
 button:before,button:after{
   content:'';

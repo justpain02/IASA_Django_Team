@@ -15,7 +15,7 @@
 
 <body>
     <div style="white-space: nowrap;">
-        <nav class="navbar navbar-light" style="background-color: rgb(99, 99, 99); margin: 0px; padding: 0px; height: 100px;">
+        <nav class="navbar navbar-light" style="background-color: #939796; margin: 0px; padding: 0px; height: 100px;">
             <form class="container-fluid justify-content-start">
                 <style type="text/css">
                     a:link { color: rgb(255, 255, 255); text-decoration: none;}
@@ -24,8 +24,11 @@
                     button{padding-top: 10px;}
                 </style>
                 
+
+                
                 {% load static %}
-                <img src="{% static 'base/images/img.jpg' %}" style="margin-top:10px; display: inline-block;" alt="hangman" width="150px">
+                <a href="{% url 'home' %}" style="width: 150px; height: 100px; display: inline-block;"><img src="{% static 'base/images/img.jpg' %}" style="margin-top:10px;" alt="hangman" width="150px"></a>
+                
                 <div style="width: 100px; top: 10px; margin-bottom: 10px; margin-left: 300px; position: relative;">
                 <div style="display: inline-block;">
                 {% load static %}
