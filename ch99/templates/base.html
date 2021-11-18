@@ -15,35 +15,37 @@
 
 <body>
     <div style="white-space: nowrap;">
-        <nav class="navbar navbar-light" style="background-color: rgb(255, 255, 255); margin: 0px; padding: 0px;">
+        <nav class="navbar navbar-light" style="background-color: rgb(99, 99, 99); margin: 0px; padding: 0px; height: 100px;">
             <form class="container-fluid justify-content-start">
                 <style type="text/css">
                     a:link { color: rgb(255, 255, 255); text-decoration: none;}
                     a:visited { color: rgb(255, 255, 255); text-decoration: none;}
                     a:hover { color: #1AAB8A; text-decoration: none;}
-                
+                    button{padding-top: 10px;}
                 </style>
-                <div style="width: 100%;">
+                
                 {% load static %}
-                <img src="{% static 'base/images/img.jpg' %}" style="margin:0;" alt="hangman" width="150px">
+                <img src="{% static 'base/images/img.jpg' %}" style="margin-top:10px; display: inline-block;" alt="hangman" width="150px">
+                <div style="width: 100px; top: 10px; margin-bottom: 10px; margin-left: 300px; position: relative;">
+                <div style="display: inline-block;">
                 {% load static %}
                 <link rel="stylesheet" type="text/css" href="{% static 'base/css/button.css' %}">
-                <button class="left"><a href=#>빠른 시작</a></button>
-                <button class="left"><a href=#>게임 선택</a></button>
+                <button><a href=#>빠른 시작</a></button>
+                <button><a href=#>게임 선택</a></button>
                 {% if user.is_active %}
-                <button class="left"><a href="{% url 'logout' %}">Logout</a></button>
-                <button class="left"><a href="{% url 'password_change' %}">Change Password</a></button>
+                <button><a href="{% url 'logout' %}">Logout</a></button>
+                <button><a href="{% url 'password_change' %}">Change Password</a></button>
                 <a><i class="fas fa-user"></i>&ensp;{% firstof user.get_short_name user.get_username %}&ensp;</a>
                 
                 
                 {% else %}
-                <button class="right"><a href="{% url 'login' %}" > Login</a></button>
-                <button class="right"><a href="{% url 'register' %}">Register</a></button>
+                <button><a href="{% url 'login' %}" > Login</a></button>
+                <button><a href="{% url 'register' %}">Register</a></button>
                 <a><i class="fas fa-user"></i>&ensp;anonymous&ensp;</a>
                 </div>
                 
                 {% endif %}
-
+                </div>
                 
             </form>
     </nav>
