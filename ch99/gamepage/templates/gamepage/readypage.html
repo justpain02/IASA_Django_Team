@@ -1,6 +1,8 @@
 {% block content %}
 
 <div>{{game.leader_name}}님의 방 : {{game.room_name}}</div>
+<!--이것도 사람 이름인데 개별로 뜨지 않음-->
+{{game.people_num.all}}
 <!--사람이름 차례대로 출력, first는 됐는데 나머지는 확인 못해봄-->
 {{game.people_num.first}}
 {{game.people_num.second}}
