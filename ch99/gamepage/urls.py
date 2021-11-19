@@ -9,6 +9,7 @@ urlpatterns = [
     path('', GamelistView.as_view(), name='list'),
     path('mainpage/<int:pk>/', MainpageView.as_view(), name='maingamepage'),
     path('add/', NewroomView.as_view(), name='add'),
-    path('ready/<int:pk>/', ReadypageView.as_view(), name='ready'),
+    path('ready/<int:pk>/', ReadypageView, name='ready'),
     path('join/<int:Game_id>/', join ,name='join'),
+    path('delete/<int:pk>/',Gamedelete.as_view(),name='delete'),
 ]

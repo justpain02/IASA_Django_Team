@@ -1,9 +1,18 @@
 {% block content %}
-<div>방번호</div>
-<form action="" method="get">
-    정답 : <input type="text" name="answer">
-    <input type="submit">
-</form>
-<a href="{% url 'maingamepage' pk=object.id %}" >시작하기</a> 
+
+<div>{{game.leader_name}}님의 방 : {{game.room_name}}</div>
+<!--사람이름 차례대로 출력, first는 됐는데 나머지는 확인 못해봄-->
+{{game.people_num.first}}
+{{game.people_num.second}}
+{{game.people_num.third}}
+{{game.people_num.fourth}}
+{{game.people_num.fifth}}
+{{game.people_num.sixth}}
+{{game.people_num.seventh}}
+{{game.people_num.eighth}}
+
+{{game.people_num.all.count}}명 참가중
+<a href="{% url 'delete' pk=game.id %}">방 없애기</a>
+<a href="{% url 'maingamepage' pk=game.id %}" >시작하기</a> 
 <!-- DetailView로 하고 object로 불러오면 pk가 불러와진다 -->
 {% endblock %}
