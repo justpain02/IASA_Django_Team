@@ -13,13 +13,16 @@
     {% block extra-style %}{% endblock %}
 </head>
 
-<body>
-    <div style="white-space: nowrap;">
+<body style="margin: 0px; padding-top: 0px;">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+    <div class="navi" style="white-space: nowrap; margin-left: 0px; width: 1903px; position: static; top:0px;">
         <nav class="navbar navbar-light" style="background-color: #939796; margin: 0px; padding: 0px; height: 100px;">
             <form class="container-fluid justify-content-start">
                 <style type="text/css">
-                    a:link { color: rgb(255, 255, 255); text-decoration: none;}
-                    a:visited { color: rgb(255, 255, 255); text-decoration: none;}
+                    a:link { color: rgb(117, 117, 117); text-decoration: none;}
+                    a:visited { color: rgb(117, 117, 117); text-decoration: none;}
                     a:hover { color: #1AAB8A; text-decoration: none;}
                     button{padding-top: 10px;}
                 </style>
@@ -27,24 +30,24 @@
 
                 
                 {% load static %}
-                <a href="{% url 'home' %}" style="width: 150px; height: 100px; display: inline-block;"><img src="{% static 'base/images/img.jpg' %}" style="margin-top:10px;" alt="hangman" width="150px"></a>
+                <a href="{% url 'home' %}" style="width: 150px; height: 100px; display: inline-block;"><img src="{% static 'base/images/img.jpg' %}" style="margin-top:10px;" alt="hangman" width="160px"></a>
                 
                 <div style="width: 100px; top: 10px; margin-bottom: 10px; margin-left: 300px; position: relative;">
                 <div style="display: inline-block;">
                 {% load static %}
                 <link rel="stylesheet" type="text/css" href="{% static 'base/css/button.css' %}">
-                <button><a href="{% url 'join' Game_id=1 %}">빠른 시작</a></button>
-                <button><a href=/gamepage>게임 선택</a></button>
+                <button class="nbut"><a href=#>빠른 시작</a></button>
+                <button class="nbut"><a href=/gamepage>게임 선택</a></button>
                 {% if user.is_active %}
-                <button><a href="{% url 'logout' %}">Logout</a></button>
-                <button><a href="{% url 'password_change' %}">Change Password</a></button>
-                <a><i class="fas fa-user"></i>&ensp;{% firstof user.get_short_name user.get_username %}&ensp;</a>
+                <button class="nbut"><a href="{% url 'logout' %}">Logout</a></button>
+                <button class="nbut"><a href="{% url 'profile' pk=user.id %}">Mypage</a></button>ah
+                <a style="font-family: 'Dancing Script', cursive; font-size: 30px;"><i class="fas fa-user"></i>&ensp;{% firstof user.get_short_name user.get_username %}&ensp;</a>
                 
                 
                 {% else %}
-                <button><a href="{% url 'login' %}" > Login</a></button>
-                <button><a href="{% url 'register' %}">Register</a></button>
-                <a><i class="fas fa-user"></i>&ensp;anonymous&ensp;</a>
+                <button class="nbut"><a href="{% url 'login' %}" > Login</a></button>
+                <button class="nbut"><a href="{% url 'register' %}">Register</a></button>
+                <a style="font-family: 'Dancing Script', cursive; font-size: 30px; margin-top: 0px;"><i class="fas fa-user"></i>&ensp;anonymous&ensp;</a>
                 </div>
                 
                 {% endif %}

@@ -4,8 +4,11 @@
 
 {% block content %}
 
-    <h1>Registration Completed Successful</h1>
-    <br>
-    <p class="font-italic"><a href="{% url 'login' %}">Log in</a></p>
-
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'registration/login/button.css' %}">
+    <div style="width: 850px; height: 100px; margin: 0 auto; margin-top: 100px; background-color: blanchedalmond; text-align: center;">
+        <h1 class="font" style="font-family: 'WandohopeB'; font-size: 40px ;">Registration Completed Successful</h1>
+        <a href="{% url 'login' %}" style="font-size: 20px; color:#1AAB8A; font-family: 'WandohopeB';">Log in</a>
+    
+    </div>
 {% endblock %}

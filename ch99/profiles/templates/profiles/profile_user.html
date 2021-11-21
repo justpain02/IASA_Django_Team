@@ -4,8 +4,11 @@
 
 {% load static %}
 
-<div>
-    <div>
+<div style="margin: 0 auto; width: 600px; height: 500px; background-color: blanchedalmond; margin-top: 50px;">
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'registration/login/button.css' %}">
+    <br><br><br>
+    <div style="width: 200px; height: 200px; margin-left: 30px; border: solid 2px; overflow: hidden; ">
         {% if profile_user.profile.profile_photo %}
         <img src="{{profile_user.profile.profile_photo.url}}" alt="프로필 이미지" width="200">
         <br>
@@ -14,23 +17,26 @@
         <br>
         {% endif %}
     </div>
-    <div>
-        <h2>{{profile_user.username}}</h2>
+    <div style="margin-left: 30px;">
         {% if user == profile_user %}
-        <a href="{% url 'profile_update' %}">
-            <button>프로필 편집</button>
-        </a>
+        <div style="clear: both; width: 500px; height: 60px;">
+        <a class="btn hover1" href="{% url 'profile_update' %}" style="width: 150px; height: 50px; font-size: 15px; float: left;">Profile Update</a>
+        <a class="btn hover1" href="{% url 'password_change' %}" style="width: 150px; height: 50px; font-size: 15px; float: left; margin-left: 20px;">Change password</a>
+        </div>
         {% endif %}
-        <h3>
-            username: {{profile_user.username}}
+        <br>
+        <h3 style="margin-left: 0px; font-family: 'WandohopeB';">
+            user id: {{profile_user.username}}
             <br>
             {% if profile_user.first_name != "" %}
             <span>name: {{profile_user.first_name}} {{profile_user.last_name}}</span>
             <br>
             {% else %}
+            username: 
             <br>
             {% endif %}
         </h3>
+        <a href="{% url 'home' %}" style="font-size: 20px; color: #1AAB8A; font-family: 'WandohopeB'; margin-top: 15px;">Go Mainpage</a>
     </div>
 </div>
 

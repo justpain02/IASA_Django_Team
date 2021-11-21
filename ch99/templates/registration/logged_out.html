@@ -4,14 +4,21 @@
 
 {% block content %}
 
-    <h1>Logged out</h1>
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'registration/login/button.css' %}">
+<div style="width: 850px; height: 210px; margin: 0 auto; margin-top: 100px; background-color: blanchedalmond; text-align: center;">
+    <h1 class="font" style="font-family: 'WandohopeB'; font-size: 70px ;">Logged out</h1>
     <br>
     <div>
         <i class="fas fa-quote-left"></i>
-        <span class="h6">&ensp;Thanks for spending your quality time with this website today.&ensp;</span>
+        <span class="h6 font" style="font-family: 'WandohopeB'; font-size: 30px;">&ensp;Thanks for spending your quality time with this website today.&ensp;</span>
         <i class="fas fa-quote-right"></i>
+        <a class="btn hover1" href="{% url 'home' %}" style="margin-top: 8px; margin-left: 15px; width: 150px; height: 50px; border: none; font-size: 20px; float: right; ">Home</a>
+        
+    <a href="{% url 'login' %}" style="font-size: 20px; float: right; color: #1AAB8A; font-family: 'WandohopeB'; margin-top: 15px;">Log in again</a>
     </div>
 
-    <p class="font-italic"><a href="{% url 'login' %}">Log in again</a></p>
+
+</div>
 
 {% endblock %}

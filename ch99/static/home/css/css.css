@@ -10,24 +10,34 @@
     font-weight: normal;
     font-style: normal;
 }
+@font-face {
+    font-family: 'WandohopeB';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-10@1.0/WandohopeB.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+  }
 .left-menu{
 	float: left;
-	width: 200px;
+	width: 400px;
 	height: 700px;
-	border: 2px solid red;
+	border: 2px solid rgb(0, 0, 0);
 	background-color: #ffe7d5;
+    overflow: hidden;
 }
 
 .article{
-	font-family: 'SBAggroB';
+	font-family: 'WandohopeB';
 	height: 700px;
     width: 1903px;
 }
 
 .comment{
-	height: 150px;
+	height: 128px;
     width: 1903px;
 	border: 2px solid purple;
 	background-color: #ffddff;
 }
 
+h1{
+    font-size: 100px;
+}

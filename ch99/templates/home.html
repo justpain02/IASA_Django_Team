@@ -12,13 +12,15 @@
 <link rel="stylesheet" type="text/css" href="{% static 'home/css/css.css' %}">
 <body>
     <div class="main">
-        <div class="left-menu">사이드바</div>
+        <div class="left-menu">
+            <img class="text" src="{% static 'home/images/hangman.jpg' %}" alt="hangman" style="white-space:nowrap; display: inline-block; margin-top: 0px; position: static; width: 100%;">
+            <br> + 게임 플레이 화면
+        </div>
         <div class="article" style="background-color: white; border: none;">
             <div style="text-align: left;" class="text">
             {% load static %}
-            <img class="text" src="{% static 'home/images/hangman.jpg' %}" alt="hangman" width="500px" style="white-space:nowrap; display: inline-block; margin-top: 0px; position: absolute;">
-            
-            <div style="display: inline-block; height: 700px; width: 1200px; margin-left: 500px;" >
+
+            <div style="display: inline-block; height: 700px; width: 1400px; margin-left: 0px;" >
             <h1>Hangman</h1><br>
             <div>
 영어 단어 맞히기 게임 중 하나로, 글자 수만큼 빈 칸 또는 밑줄을 그려놓고 26개 글자 중 하나를 대면 해당 단어 안에 그 글자가 있을 경우 있는 칸에 다 적어놓고, 없을 경우 라이프를 하나 깎는다.<br>
