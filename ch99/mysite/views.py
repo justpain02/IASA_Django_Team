@@ -1,6 +1,7 @@
 from typing import ClassVar
 from django.views.generic.base import TemplateView
 from django.views.generic import CreateView
+from django.views.generic.detail import DetailView
 from django.contrib.auth.forms import UserChangeForm, UserCreationForm
 from django.urls import reverse_lazy
 
