@@ -63,8 +63,9 @@
   
   </style>
  </head>
-
+{% block content %}
 <body>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
   <!--누구누구 님의 게임 한거-->
   <div>{{object.id}}번 방</div>
   <div>{{object.leader_name}}님의 게임</div>
@@ -72,7 +73,29 @@
 
 
   <nav>
+      {% if object.hangman_status == 1 %}
       <img src="{% static 'hangman/images/hangman 1.png' %}"  alt="행맨 테스트 이미지" width=90%>
+      {% elif object.hangman_status == 2 %}
+      <img src="{% static 'hangman/images/hangman 2.png' %}"  alt="행맨 테스트 이미지" width=90%>
+      {% elif object.hangman_status == 3 %}
+      <img src="{% static 'hangman/images/hangman 3.png' %}"  alt="행맨 테스트 이미지" width=90%>
+      {% elif object.hangman_status == 4 %}
+      <img src="{% static 'hangman/images/hangman 4.png' %}"  alt="행맨 테스트 이미지" width=90%>
+      {% elif object.hangman_status == 5 %}
+      <img src="{% static 'hangman/images/hangman 5.png' %}"  alt="행맨 테스트 이미지" width=90%>
+      {% elif object.hangman_status == 6 %}
+      <img src="{% static 'hangman/images/hangman 6.png' %}"  alt="행맨 테스트 이미지" width=90%>
+      {% elif object.hangman_status == 7 %}
+      <img src="{% static 'hangman/images/hangman 7.png' %}"  alt="행맨 테스트 이미지" width=90%>
+      {% elif object.hangman_status == 8 %}
+      <img src="{% static 'hangman/images/hangman 8.png' %}"  alt="행맨 테스트 이미지" width=90%>
+      {% elif object.hangman_status == 9 %}
+      <img src="{% static 'hangman/images/hangman 9.png' %}"  alt="행맨 테스트 이미지" width=90%>
+      {% elif object.hangman_status == 10 %}
+      <img src="{% static 'hangman/images/hangman 10.png' %}"  alt="행맨 테스트 이미지" width=90%>
+      {% elif object.hangman_status == 11 %}
+      <img src="{% static 'hangman/images/hangman 11.png' %}"  alt="행맨 테스트 이미지" width=90%>
+      {% endif %}
    
   </nav>
 
@@ -80,37 +103,58 @@
     <article1>
 
       <h2>정답 칸</h2>
+      <h2></h2>
     </article1>
 
     <article2>
-
+      
     <div id="btn_group">
-      <button id="test_btn1">a</button>
-      <button id="test_btn1">b</button>
-      <button id="test_btn1">c</button>
-      <button id="test_btn1">d</button>
-      <button id="test_btn1">e</button>
-      <button id="test_btn1">f</button>
-      <button id="test_btn1">g</button>
-      <button id="test_btn1">h</button>
-      <button id="test_btn1">i</button>
-      <button id="test_btn1">j</button>
-      <button id="test_btn1">k</button>
-      <button id="test_btn1">l</button>
-      <button id="test_btn1">m</button>
-      <button id="test_btn1">n</button>
-      <button id="test_btn1">o</button>
-      <button id="test_btn1">p</button>
-      <button id="test_btn1">q</button>
-      <button id="test_btn1">r</button>
-      <button id="test_btn1">s</button>
-      <button id="test_btn1">t</button>
-      <button id="test_btn1">u</button>
-      <button id="test_btn1">v</button>
-      <button id="test_btn1">w</button>
-      <button id="test_btn1">x</button>
-      <button id="test_btn1">y</button>
-      <button id="test_btn1">z</button>
+      {% if not object.button_status.a %}
+      <button id="test_btn1" class="btnAjax_a" value="a">a</button>
+      {% else %}
+      <button id="test_btn1" class="btnAjax_a" value="a" disabled>a</button>
+      {% endif %}
+      {% if not object.button_status.b %}
+      <button id="test_btn1" class="btnAjax_b" value="b">b</button>
+      {% else %}
+      <button id="test_btn1" class="btnAjax_b" value="b" disabled>b</button>
+      {% endif %}
+      {% if not object.button_status.c %}
+      <button id="test_btn1" class="btnAjax_c" value="c">c</button>
+      {% else %}
+      <button id="test_btn1" class="btnAjax_c" value="c" disabled>c</button>
+      {% endif %}
+      {% if not object.button_status.d %}
+      <button id="test_btn1" class="btnAjax_d" value="d">d</button>
+      {% else %}
+      <button id="test_btn1" class="btnAjax_d" value="d" disabled>d</button>
+      {% endif %}
+      {% if not object.button_status.c %}
+      <button id="test_btn1" class="btnAjax_e" value="e">e</button>
+      {% else %}
+      <button id="test_btn1" class="btnAjax_e" value="e" disabled>e</button>
+      {% endif %}
+      <button id="test_btn1" class="btnAjax_f" value="f">f</button>
+      <button id="test_btn1" class="btnAjax_g" value="g">g</button>
+      <button id="test_btn1" class="btnAjax_h" value="h">h</button>
+      <button id="test_btn1" class="btnAjax_i" value="i">i</button>
+      <button id="test_btn1" class="btnAjax_j" value="j">j</button>
+      <button id="test_btn1" class="btnAjax_k" value="k">k</button>
+      <button id="test_btn1" class="btnAjax_l" value="l">l</button>
+      <button id="test_btn1" class="btnAjax_m" value="m">m</button>
+      <button id="test_btn1" class="btnAjax_n" value="n">n</button>
+      <button id="test_btn1" class="btnAjax_o" value="o">o</button>
+      <button id="test_btn1" class="btnAjax_p" value="p">p</button>
+      <button id="test_btn1" class="btnAjax_q" value="q">q</button>
+      <button id="test_btn1" class="btnAjax_r" value="r">r</button>
+      <button id="test_btn1" class="btnAjax_s" value="s">s</button>
+      <button id="test_btn1" class="btnAjax_t" value="t">t</button>
+      <button id="test_btn1" class="btnAjax_u" value="u">u</button>
+      <button id="test_btn1" class="btnAjax_v" value="v">v</button>
+      <button id="test_btn1" class="btnAjax_w" value="w">w</button>
+      <button id="test_btn1" class="btnAjax_x" value="x">x</button>
+      <button id="test_btn1" class="btnAjax_y" value="y">y</button>
+      <button id="test_btn1" class="btnAjax_z" value="z">z</button>
       
     </div>  
     </article2>
@@ -130,5 +174,91 @@
 
 
 </body>
+{% endblock %}
+<script>
+
+  let btnAjax_a = document.querySelector('.btnAjax_a');
+  let btnAjax_b = document.querySelector('.btnAjax_b');
+  let btnAjax_c = document.querySelector('.btnAjax_c');
+  let btnAjax_d = document.querySelector('.btnAjax_d');
+  let btnAjax_e = document.querySelector('.btnAjax_e');
+  let btnAjax_f = document.querySelector('.btnAjax_f');
+  let btnAjax_g = document.querySelector('.btnAjax_g');
+  let btnAjax_h = document.querySelector('.btnAjax_h');
+  let btnAjax_i = document.querySelector('.btnAjax_i');
+  let btnAjax_j = document.querySelector('.btnAjax_j');
+  let btnAjax_k = document.querySelector('.btnAjax_k');
+  let btnAjax_l = document.querySelector('.btnAjax_l');
+  let btnAjax_m = document.querySelector('.btnAjax_m');
+  let btnAjax_n = document.querySelector('.btnAjax_n');
+  let btnAjax_o = document.querySelector('.btnAjax_o');
+  let btnAjax_p = document.querySelector('.btnAjax_p');
+  let btnAjax_q = document.querySelector('.btnAjax_q');
+  let btnAjax_r = document.querySelector('.btnAjax_r');
+  let btnAjax_s = document.querySelector('.btnAjax_s');
+  let btnAjax_t = document.querySelector('.btnAjax_t');
+  let btnAjax_u = document.querySelector('.btnAjax_u');
+  let btnAjax_v = document.querySelector('.btnAjax_v');
+  let btnAjax_w = document.querySelector('.btnAjax_w');
+  let btnAjax_x = document.querySelector('.btnAjax_x');
+  let btnAjax_y = document.querySelector('.btnAjax_y');
+  let btnAjax_z = document.querySelector('.btnAjax_z');
+  
+  btnAjax_a.addEventListener('click', sendData);
+  btnAjax_b.addEventListener('click', sendData);
+  btnAjax_c.addEventListener('click', sendData);
+  btnAjax_d.addEventListener('click', sendData);
+  btnAjax_e.addEventListener('click', sendData);
+  btnAjax_f.addEventListener('click', sendData);
+  btnAjax_g.addEventListener('click', sendData);
+  btnAjax_h.addEventListener('click', sendData);
+  btnAjax_i.addEventListener('click', sendData);
+  btnAjax_j.addEventListener('click', sendData);
+  btnAjax_k.addEventListener('click', sendData);
+  btnAjax_l.addEventListener('click', sendData);
+  btnAjax_m.addEventListener('click', sendData);
+  btnAjax_n.addEventListener('click', sendData);
+  btnAjax_o.addEventListener('click', sendData);
+  btnAjax_p.addEventListener('click', sendData);
+  btnAjax_q.addEventListener('click', sendData);
+  btnAjax_r.addEventListener('click', sendData);
+  btnAjax_s.addEventListener('click', sendData);
+  btnAjax_t.addEventListener('click', sendData);
+  btnAjax_u.addEventListener('click', sendData);
+  btnAjax_v.addEventListener('click', sendData);
+  btnAjax_w.addEventListener('click', sendData);
+  btnAjax_x.addEventListener('click', sendData);
+  btnAjax_y.addEventListener('click', sendData);
+  btnAjax_z.addEventListener('click', sendData);
+  
+  function sendData(event) {
+    console.log("{{object.id}}, " + $(this).val());
+    let pressed_value = $(this).attr('value');
+    var pk = "{{object.id}}";
+    // let pk = 'game_id'.replace('game_id', object.id);
+    let param = {
+      "pk" : pk,
+      "pressed_value" : pressed_value,
+    }
+    console.log("pk : " + pk);
+    $.ajax({
+      url : "{% url 'game_button' %}",
+      type : 'POST',
+      headers : {
+        'X-CSRFTOKEN' : '{{ csrf_token }}'
+      },
+      data : JSON.stringify(param),
+      success:function(data){
+        console.log(data);
+      },
+      error: function(){
+        alert('에러가 발생했습니다 : ' + pressed_value);
+      }
+    });
+  }
+
+  
+
+</script>
 
 </html>
