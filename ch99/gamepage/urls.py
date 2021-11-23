@@ -1,5 +1,7 @@
+from django.conf.urls import url
 from django.contrib import admin
 from django.urls import path, include
+from django.conf.urls import url
 from django.conf.urls.static import static
 from django.conf import settings
 from .views import *
@@ -12,4 +14,5 @@ urlpatterns = [
     path('ready/<int:pk>/', ReadypageView, name='ready'),
     path('join/<int:Game_id>/', join ,name='join'),
     path('delete/<int:pk>/',Gamedelete.as_view(),name='delete'),
+    url(r'^game_button/$', about_button_status, name="game_button"),
 ]

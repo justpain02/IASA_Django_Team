@@ -338,7 +338,15 @@
   btnAjax_y.addEventListener('click', sendData);
   btnAjax_z.addEventListener('click', sendData);
   
-  
+  function hideText() {
+    let answer = "{{object.answer}}";
+    console.log("answer : {{object.answer}}, answer_text : " + answer);
+    const button_status_json_temp = "{{object.button_status}}";
+    console.log("button_status : " + button_status_json_temp + " , type : " + typeof(button_status_json_temp));
+    const button_status_json = JSON.parse(button_status_json_temp);
+    console.log("button_status : " + button_status_json + " , type : " + typeof(button_status_json));
+    
+  }
 
   function sendData(event) {
     console.log("{{object.id}}, " + $(this).val());
@@ -358,7 +366,8 @@
       },
       data : JSON.stringify(param),
       success:function(data){
-        console.log(data);
+        // console.log(data);
+        hideText();
       },
       error: function(){
         alert('에러가 발생했습니다 : ' + pressed_value);
