@@ -38,7 +38,7 @@ class Game(models.Model):
     leader_name = models.CharField('방장',max_length=30)
     user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE, related_name='유저', blank=True, null=True)
     people_num = models.ManyToManyField(settings.AUTH_USER_MODEL, default=0, blank=True, related_name='참여수')
-    answer = models.CharField('정답',max_length=30 , default=0)
+    answer = models.CharField('정답',max_length=30 , default="answer")
     button_status = models.JSONField(default = default_button_dict)
     hangman_status = models.IntegerField(default=1)
     game_finished = models.IntegerField(default=0)

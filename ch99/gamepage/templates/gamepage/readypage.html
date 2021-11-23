@@ -56,6 +56,13 @@
 </div>
 </div>
 <div class="y">
+    <a href="{% url 'join' Game_id=game.id %}" class="btn hover1 x"  style="font-size: 30px; height: 50px; margin-right: 10px;">
+        {% if user in object.people_num.all %}
+        <i>참여하기</i>
+        {% else %}
+        <i>나가기</i>
+        {% endif %}
+      </a>
     <a href="{% url 'delete' pk=game.id %}" class="btn hover1 x" style="font-size: 30px; height: 50px; margin-right: 10px;">방 없애기</a>
     <a href="{% url 'maingamepage' pk=game.id %}" class="btn hover1 x" style="font-size: 30px; height: 50px; margin-right: 10px;">시작하기</a> 
 </div>
