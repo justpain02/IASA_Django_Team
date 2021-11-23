@@ -1,8 +1,11 @@
-<div class="btn-group">
-    <a href="add" class="btn btn-info">게임방 생성</a>
-</div>
-<p></p>
-<table class="table">
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'gamepage/table.css' %}">
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'gamepage/button.css' %}">
+    <a href="add" style="float: left; text-decoration: none;" ><button class="btn btn-3 " style="margin-top: 10px; margin-left: 10px; margin-bottom: 10px;  font-family: 'WandohopeB'; font-size: 40px;">게임방 생성</button></a>
+<p style="clear: both;"></p>
+
+<table class="table type11">
     <thead>
         <tr>
             <th scope="col">방 번호</th>
