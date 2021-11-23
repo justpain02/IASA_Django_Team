@@ -4,10 +4,15 @@ from django.views.generic import CreateView
 from django.views.generic.detail import DetailView
 from django.contrib.auth.forms import UserChangeForm, UserCreationForm
 from django.urls import reverse_lazy
+from gamepage.models import Game
+from django.shortcuts import render
 
 #--- TemplateView
-class HomeView(TemplateView):
-    template_name = 'home.html'
+def HomeView(request):
+    gamelist = Game.objects.all().order_by('-pk')
+    return render(request, 'home.html', {'game':gamelist[0]})
+""" class HomeView(TemplateView):
+    template_name = 'home.html' """
 
 #--- User Creation
 class UserCreateView(CreateView):
