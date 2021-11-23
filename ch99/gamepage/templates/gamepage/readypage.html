@@ -1,20 +1,64 @@
 {% block content %}
-
-<div>{{game.leader_name}}님의 방 : {{game.room_name}}</div>
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'gamepage/ready.css' %}">
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'registration/login/button.css' %}">
+<div class="body">
+<div class="text">
+{{game.leader_name}}님의 방 : {{game.room_name}}<br>
 <!--이것도 사람 이름인데 개별로 뜨지 않음-->
-{{game.people_num.all}}
-<!--사람이름 차례대로 출력, first는 됐는데 나머지는 확인 못해봄-->
-{{game.people_num.first}}
-{{game.people_num.second}}
-{{game.people_num.third}}
-{{game.people_num.fourth}}
-{{game.people_num.fifth}}
-{{game.people_num.sixth}}
-{{game.people_num.seventh}}
-{{game.people_num.eighth}}
-
+{{game.people_num.all}}<br>
 {{game.people_num.all.count}}명 참가중
-<a href="{% url 'delete' pk=game.id %}">방 없애기</a>
-<a href="{% url 'maingamepage' pk=game.id %}" >시작하기</a> 
+</div>
+<div class="line">
+<!--사람이름 차례대로 출력, first는 됐는데 나머지는 확인 못해봄-->
+<div class="box">
+    {% load static %}
+    <div class="img-back"><img src="{% static 'base/images/img.jpg' %}" class="images"></div>
+    <div class="username">{{game.people_num.first}}</div>
+</div>
+<div class="box">
+    {% load static %}
+    <div class="img-back"><img src="{% static 'base/images/img.jpg' %}" class="images"></div>
+    <div class="username">{{game.people_num.second}}</div>
+</div>
+<div class="box">
+    {% load static %}
+    <div class="img-back"><img src="{% static 'base/images/img.jpg' %}" class="images"></div>
+    <div class="username">{{game.people_num.third}}</div>
+</div>
+<div class="box">
+    {% load static %}
+    <div class="img-back"><img src="{% static 'base/images/img.jpg' %}" class="images"></div>
+    <div class="username">{{game.people_num.fourth}}</div>
+</div>
+</div>
+<div class="line">
+<div class="box">
+    {% load static %}
+    <div class="img-back"><img src="{% static 'base/images/img.jpg' %}" class="images"></div>
+    <div class="username">{{game.people_num.fifth}}</div>
+</div>
+<div class="box">
+    {% load static %}
+    <div class="img-back"><img src="{% static 'base/images/img.jpg' %}" class="images"></div>
+    <div class="username">{{game.people_num.sixth}}</div>
+</div>
+<div class="box">
+    {% load static %}
+    <div class="img-back"><img src="{% static 'base/images/img.jpg' %}" class="images"></div>
+    <div class="username">{{game.people_num.seventh}}</div>
+</div>
+<div class="box">
+    {% load static %}
+    <div class="img-back"><img src="{% static 'base/images/img.jpg' %}" class="images"></div>
+    <div class="username">{{game.people_num.eighth}}</div>
+</div>
+</div>
+<div class="y">
+    <a href="{% url 'delete' pk=game.id %}" class="btn hover1 x" style="font-size: 30px; height: 50px; margin-right: 10px;">방 없애기</a>
+    <a href="{% url 'maingamepage' pk=game.id %}" class="btn hover1 x" style="font-size: 30px; height: 50px; margin-right: 10px;">시작하기</a> 
+</div>
+</div>
 <!-- DetailView로 하고 object로 불러오면 pk가 불러와진다 -->
 {% endblock %}
