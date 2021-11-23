@@ -9,8 +9,9 @@ from django.shortcuts import render
 
 #--- TemplateView
 def HomeView(request):
+    gamelist = Game.objects.all().order_by('-pk')
     
-    return render(request, 'home.html')
+    return render(request, 'home.html', {'game':gamelist[0]})
 """ class HomeView(TemplateView):
     template_name = 'home.html' """
 
