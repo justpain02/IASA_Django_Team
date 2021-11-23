@@ -31,5 +31,5 @@ urlpatterns = [
     path('accounts/register/done/', UserCreateDoneTV.as_view(), name='register_done'),
     path('', HomeView, name='home'),
     path('accounts/profile/', include('profiles.urls')),
-    path('gamepage/', include('gamepage.urls')),
+    path('gamepage/', include('gamepage.urls'), name='gamepage'),
 ] + static(settings.MEDIA_URL, document_root = settings.MEDIA_ROOT)

@@ -6,36 +6,24 @@
   <meta charset="UTF-8">
   <title>HTML Layouts</title>
   <style>
-
-
     section {
       background-color: white;
       width: 65%;
       height: 560px;
       float: right;
-
     }
-
     article1 {
-
-      background-color: mediumspringgreen;
+      background-color: gray;
       width: 100%;
       height: 280px;
       float: right;
-
-
     }
-
-    article2 {
-      
-      background-color: mediumspringgreen;
+    article2 { 
+      background-color: gray;
       width: 100%;
       height: 280px;
       margin-left: -(width의 1/2)px; margin-top: -(height의 1/2)px;
-
     }
-
-
     nav {
       background-color: white;
       color:white;
@@ -43,12 +31,9 @@
       height: 560px;
       float: left;
     }
-
     nav,section,aside {text-align: center;}
     article1,article2 {line-height: 100px;}
     nav,section {line-height: 240px;}
-
-
   </style>
   
 </head>
@@ -56,10 +41,13 @@
 <head>
   <title>Button Test</title>
   <style>
-  #test_btn1{ width: 6.5% ; height: 40px; margin-right:2px; margin-left:2px; border-top-left-radius: 5px; border-bottom-left-radius: 5px; border-top-right-radius: 5px; border-bottom-right-radius: 5px;  -webkit-transition-duration: 0.4s; /* Safari */  transition-duration: 0.4s; }
-  #btn_group button{ border: 1px solid blue; background-color: rgba(0,0,0,0); color: skyblue; padding: 5px; }
-  #btn_group button:hover{ color:blue; background-color: mediumspringgreen; }
-  
+  #test_btn1{ border: 1px solid blue; background-color: rgba(0,0,0,0); color: skyblue; padding: 5px; width: 6.5% ; 
+    height: 40px; margin-right:2px; margin-left:2px; border-top-left-radius: 5px; border-bottom-left-radius: 5px; border-top-right-radius: 5px; 
+    border-bottom-right-radius: 5px;  -webkit-transition-duration: 0.4s; /* Safari */  transition-duration: 0.4s; }
+  #btn_group button:hover{ color:white; background-color: white; }
+  #finish{ color:white; border: white; width: 6.5% ; height: 40px; margin-right:2px; margin-left:2px; border-top-left-radius: 5px;
+     border-bottom-left-radius: 5px; border-top-right-radius: 5px; border-bottom-right-radius: 5px;  -webkit-transition-duration: 0.4s; 
+     /* Safari */  transition-duration: 0.4s; }
   
   </style>
  </head>
@@ -69,8 +57,6 @@
   <!--누구누구 님의 게임 한거-->
   <div>{{object.id}}번 방</div>
   <div>{{object.leader_name}}님의 게임</div>
-
-
 
   <nav>
       {% if object.hangman_status == 1 %}
@@ -111,156 +97,158 @@
       {% if not object.button_status.a %}
         <button id="test_btn1" class="btnAjax_a" value="a">a</button>
       {% else %}
-        <button id="test_btn1" class="btnAjax_a" value="a" disabled>a</button>
+        <button id="finish" class="btnAjax_a" value="a" disabled>a</button>
       {% endif %}
 
       {% if not object.button_status.b %}
         <button id="test_btn1" class="btnAjax_b" value="b">b</button>
       {% else %}
-        <button id="test_btn1" class="btnAjax_b" value="b" disabled>b</button>
+        <button id="finish" class="btnAjax_b" value="b" disabled>b</button>
       {% endif %}
       
       {% if not object.button_status.c %}
         <button id="test_btn1" class="btnAjax_c" value="c">c</button>
       {% else %}
-        <button id="test_btn1" class="btnAjax_c" value="c" disabled>c</button>
+        <button id="finish" class="btnAjax_c" value="c" disabled>c</button>
       {% endif %}
       
       {% if not object.button_status.d %}
         <button id="test_btn1" class="btnAjax_d" value="d">d</button>
       {% else %}
-        <button id="test_btn1" class="btnAjax_d" value="d" disabled>d</button>
+        <button id="finish" class="btnAjax_d" value="d" disabled>d</button>
       {% endif %}
       
       {% if not object.button_status.e %}
         <button id="test_btn1" class="btnAjax_e" value="e">e</button>
       {% else %}
-        <button id="test_btn1" class="btnAjax_e" value="e" disabled>e</button>
+        <button id="finish" class="btnAjax_e" value="e" disabled>e</button>
       {% endif %}
       
       {% if not object.button_status.f %}
         <button id="test_btn1" class="btnAjax_f" value="f">f</button>
       {% else %}
-        <button id="test_btn1" class="btnAjax_f" value="f" disabled>f</button>
+        <button id="finish" class="btnAjax_f" value="f" disabled>f</button>
       {% endif %}
       
       {% if not object.button_status.g %}
         <button id="test_btn1" class="btnAjax_g" value="g">g</button>
       {% else %}
-        <button id="test_btn1" class="btnAjax_g" value="g">g</button>
+        <button id="finish" class="btnAjax_g" value="g">g</button>
       {% endif %}
       
       {% if not object.button_status.h %}
         <button id="test_btn1" class="btnAjax_h" value="h">h</button>
       {% else %}
-        <button id="test_btn1" class="btnAjax_h" value="h" disabled>h</button>
+        <button id="finish" class="btnAjax_h" value="h" disabled>h</button>
       {% endif %}
       
       {% if not object.button_status.i %}
         <button id="test_btn1" class="btnAjax_i" value="i">i</button>
       {% else %}
-        <button id="test_btn1" class="btnAjax_i" value="i" disabled>i</button>
+        <button id="finish" class="btnAjax_i" value="i" disabled>i</button>
       {% endif %}
       
       {% if not object.button_status.j %}
+        <button id="test_btn1" class="btnAjax_j" value="j">j</button>
       {% else %}
+        <button id="finish" class="btnAjax_j" value="j" disabled>j</button> 
       {% endif %}
-      <button id="test_btn1" class="btnAjax_j" value="j">j</button>
+      
       
       {% if not object.button_status.k %}
         <button id="test_btn1" class="btnAjax_k" value="k">k</button>
       {% else %}
-        <button id="test_btn1" class="btnAjax_k" value="k" disabled>k</button>
+        <button id="finish" class="btnAjax_k" value="k" disabled>k</button>
       {% endif %}
 
       {% if not object.button_status.l %}
         <button id="test_btn1" class="btnAjax_l" value="l">l</button>
       {% else %}
-        <button id="test_btn1" class="btnAjax_l" value="l" disabled>l</button>
+        <button id="finish" class="btnAjax_l" value="l" disabled>l</button>
       {% endif %}
       
       {% if not object.button_status.m %}
         <button id="test_btn1" class="btnAjax_m" value="m">m</button>
       {% else %}
-        <button id="test_btn1" class="btnAjax_m" value="m" disabled>m</button>
+        <button id="finish" class="btnAjax_m" value="m" disabled>m</button>
       {% endif %}
       
       {% if not object.button_status.n %}
         <button id="test_btn1" class="btnAjax_n" value="n">n</button>
       {% else %}
-        <button id="test_btn1" class="btnAjax_n" value="n" disabled>n</button>
+        <button id="finish" class="btnAjax_n" value="n" disabled>n</button>
       {% endif %}
 
       {% if not object.button_status.o %}
         <button id="test_btn1" class="btnAjax_o" value="o">o</button>
       {% else %}
-        <button id="test_btn1" class="btnAjax_o" value="o" disabled>o</button>
+        <button id="finish" class="btnAjax_o" value="o" disabled>o</button>
       {% endif %}
 
       {% if not object.button_status.p %}
         <button id="test_btn1" class="btnAjax_p" value="p">p</button>
       {% else %}
-        <button id="test_btn1" class="btnAjax_p" value="p" disabled>p</button>
+        <button id="finish" class="btnAjax_p" value="p" disabled>p</button>
       {% endif %}
       
       {% if not object.button_status.q %}
       <button id="test_btn1" class="btnAjax_q" value="q">q</button>
       {% else %}
-      <button id="test_btn1" class="btnAjax_q" value="q" disabled>q</button>
+      <button id="finish" class="btnAjax_q" value="q" disabled>q</button>
       {% endif %}
       
       {% if not object.button_status.r %}
         <button id="test_btn1" class="btnAjax_r" value="r">r</button>
       {% else %}
-        <button id="test_btn1" class="btnAjax_r" value="r" disabled>r</button>
+        <button id="finish" class="btnAjax_r" value="r" disabled>r</button>
       {% endif %}
       
       {% if not object.button_status.s %}
       <button id="test_btn1" class="btnAjax_s" value="s">s</button>
       {% else %}
-      <button id="test_btn1" class="btnAjax_s" value="s" disabled>s</button>
+      <button id="finish" class="btnAjax_s" value="s" disabled>s</button>
       {% endif %}
       
       {% if not object.button_status.t %}
         <button id="test_btn1" class="btnAjax_t" value="t">t</button>
       {% else %}
-        <button id="test_btn1" class="btnAjax_t" value="t" disabled>t</button>
+        <button id="finish" class="btnAjax_t" value="t" disabled>t</button>
       {% endif %}
       
       {% if not object.button_status.u %}
         <button id="test_btn1" class="btnAjax_u" value="u">u</button>
       {% else %}
-        <button id="test_btn1" class="btnAjax_u" value="u" disabled>u</button>
+        <button id="finish" class="btnAjax_u" value="u" disabled>u</button>
       {% endif %}
       
       {% if not object.button_status.v %}
         <button id="test_btn1" class="btnAjax_v" value="v">v</button>
       {% else %}
-        <button id="test_btn1" class="btnAjax_v" value="v" disabled>v</button>
+        <button id="finish" class="btnAjax_v" value="v" disabled>v</button>
       {% endif %}
       
       {% if not object.button_status.w %}
         <button id="test_btn1" class="btnAjax_w" value="w">w</button>
       {% else %}
-        <button id="test_btn1" class="btnAjax_w" value="w" disabled>w</button>
+        <button id="finish" class="btnAjax_w" value="w" disabled>w</button>
       {% endif %}
       
       {% if not object.button_status.x %}
         <button id="test_btn1" class="btnAjax_x" value="x">x</button>
       {% else %}
-        <button id="test_btn1" class="btnAjax_x" value="x" disabled>x</button>
+        <button id="finish" class="btnAjax_x" value="x" disabled>x</button>
       {% endif %}
       
       {% if not object.button_status.y %}
         <button id="test_btn1" class="btnAjax_y" value="y">y</button>
       {% else %}
-        <button id="test_btn1" class="btnAjax_y" value="y" disabled>y</button>
+        <button id="finish" class="btnAjax_y" value="y" disabled>y</button>
       {% endif %}
       
       {% if not object.button_status.z %}
         <button id="test_btn1" class="btnAjax_z" value="z">z</button>
       {% else %}
-        <button id="test_btn1" class="btnAjax_z" value="z" disabled>z</button>
+        <button id="finish" class="btnAjax_z" value="z" disabled>z</button>
       {% endif %}
       
     </div>  
@@ -637,6 +625,7 @@
   }
   function hideText_withoutSend() {
     let answer = "{{object.answer}}";
+    var pk = "{{object.id}}";
     console.log("answer : {{object.answer}}, answer_text : " + answer, " , type : " + typeof(answer));
     let show_answer = "";
     let total_answer = 0;
@@ -906,6 +895,16 @@
     }
     console.log(show_answer);
     $("#answer_text").text(show_answer);
+    let game_finished_temp = "{{object.game_finished}}";
+    console.log(game_finished_temp, typeof(game_finished_temp));
+    let game_finished = Number(game_finished_temp);
+    console.log(game_finished, typeof(game_finished));
+    if(game_finished === 2){
+      window.location.href="{% url 'fail' pk=object.id %}";
+    }
+    else if(game_finished === 1){
+      window.location.href="{% url 'success' pk=object.id %}";
+    }
   }
   function sendData(event) {
     console.log("{{object.id}}, " + $(this).val());

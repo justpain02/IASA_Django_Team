@@ -21,7 +21,6 @@
 	width: 400px;
 	height: 700px;
 	border: 2px solid rgb(0, 0, 0);
-	background-color: #ffe7d5;
     overflow: hidden;
 }
 
@@ -29,13 +28,12 @@
 	font-family: 'WandohopeB';
 	height: 700px;
     width: 1903px;
+    border: solid 1px black;
 }
 
 .comment{
 	height: 128px;
     width: 1903px;
-	border: 2px solid purple;
-	background-color: #ffddff;
 }
 
 h1{

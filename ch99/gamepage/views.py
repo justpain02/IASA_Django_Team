@@ -57,6 +57,15 @@ def give_word_status(request, pk):
     game = Game.objects.get(pk=pk)
     return render(request, 'gamepage/game_textpart.html', {'game' : game})
 
+class Gamefail(DeleteView):
+    model= Game
+    template_name_suffix='_fail'
+
+    
+class Gamesuccess(DeleteView):
+    model = Game
+    template_name_suffix='_success'
+
 @login_required
 @require_POST
 def about_button_status(request):
