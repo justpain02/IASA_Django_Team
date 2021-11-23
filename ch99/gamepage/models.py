@@ -30,7 +30,7 @@ def default_button_dict():
         "w" : False,
         "x" : False,
         "y" : False,
-        "z" : False,
+        "z" : False
     }
 
 class Game(models.Model):
@@ -41,7 +41,7 @@ class Game(models.Model):
     answer = models.CharField('정답',max_length=30 , default=0)
     button_status = models.JSONField(default = default_button_dict)
     hangman_status = models.IntegerField(default=1)
-
+    game_finished = models.IntegerField(default=0)
     def get_absolute_url(self):
         return reverse('list')
 

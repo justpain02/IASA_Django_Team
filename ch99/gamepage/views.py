@@ -70,10 +70,29 @@ def about_button_status(request):
     game.button_status.update({jsonObject.get('pressed_value') : True})
     # Game.objects.filter(pk=int(jsonObject.get('pressed_value'))).update()
     print(game.button_status)
+    failed = jsonObject.get('failed')
+    if failed == "True":
+        game.hangman_status += 1
     game.save()
     return redirect(f'/gamepage/mainpage/{pk}/')
 
-    
+@login_required
+@require_POST
+def game_check(request):
+    jsonObject = json.loads(request.body)
+    pk = jsonObject.get('pk')
+    game = get_object_or_404(Game, pk=pk)
+    finished = jsonObject.get('finished')
+    if (finished == "True"):
+        game.game_finished = 1
+    failed = jsonObject.get('failed')
+    if game.hangman_status == 12:
+        game.game_finished = 2
+    game.save()
+    print(finished, finished=="True", finished=="False", game.game_finished, game.hangman_status)
+    return redirect(f'/gamepage/mainpage/{pk}/')
+
+
 @login_required
 def join(request, Game_id):
     game = get_object_or_404(Game, id=Game_id)

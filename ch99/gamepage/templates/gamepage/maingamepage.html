@@ -340,21 +340,590 @@
   
   function hideText() {
     let answer = "{{object.answer}}";
-    console.log("answer : {{object.answer}}, answer_text : " + answer);
-    const button_status_json_temp = "{{object.button_status}}";
-    console.log("button_status : " + button_status_json_temp + " , type : " + typeof(button_status_json_temp));
-    const button_status_json = JSON.parse(button_status_json_temp);
-    console.log("button_status : " + button_status_json + " , type : " + typeof(button_status_json));
+    console.log("answer : {{object.answer}}, answer_text : " + answer, " , type : " + typeof(answer));
+    let show_answer = "";
+    let total_answer = 0;
+    for(let i = 0; i < answer.length; i++){
+      console.log(answer[i]);
+      if(answer[i] == "a"){
+        if ("{{object.button_status.a}}" == "True"){
+          console.log(answer[i] + " is True, button pressed, show Text");
+          show_answer += answer[i];
+          total_answer += 1;
+        }
+        else{
+          show_answer += "_";
+        }
+      }
+      else if(answer[i] == "b"){
+        if ("{{object.button_status.b}}" == "True"){
+          console.log(answer[i] + " is True, button pressed, show Text");
+          show_answer += answer[i];
+          total_answer += 1;
+        }
+        else{
+          show_answer += "_";
+        }
+      }
+      else if(answer[i] == "c"){
+        if ("{{object.button_status.c}}" == "True"){
+          console.log(answer[i] + " is True, button pressed, show Text");
+          show_answer += answer[i];
+          total_answer += 1;
+        }
+        else{
+          show_answer += "_";
+        }
+      }
+      else if(answer[i] == "d"){
+        if ("{{object.button_status.d}}" == "True"){
+          console.log(answer[i] + " is True, button pressed, show Text");
+          show_answer += answer[i];
+          total_answer += 1;
+        }
+        else{
+          show_answer += "_";
+        }
+      }
+      else if(answer[i] == "e"){
+        if ("{{object.button_status.e}}" == "True"){
+          console.log(answer[i] + " is True, button pressed, show Text");
+          show_answer += answer[i];
+          total_answer += 1;
+        }
+        else{
+          show_answer += "_";
+        }
+      }
+      else if(answer[i] == "f"){
+        if ("{{object.button_status.f}}" == "True"){
+          console.log(answer[i] + " is True, button pressed, show Text");
+          show_answer += answer[i];
+          total_answer += 1;
+        }
+        else{
+          show_answer += "_";
+        }
+      }
+      else if(answer[i] == "g"){
+        if ("{{object.button_status.g}}" == "True"){
+          console.log(answer[i] + " is True, button pressed, show Text");
+          show_answer += answer[i];
+          total_answer += 1;
+        }
+        else{
+          show_answer += "_";
+        }
+      }
+      else if(answer[i] == "h"){
+        if ("{{object.button_status.h}}" == "True"){
+          console.log(answer[i] + " is True, button pressed, show Text");
+          show_answer += answer[i];
+          total_answer += 1;
+        }
+        else{
+          show_answer += "_";
+        }
+      }
+      else if(answer[i] == "i"){
+        if ("{{object.button_status.i}}" == "True"){
+          console.log(answer[i] + " is True, button pressed, show Text");
+          show_answer += answer[i];
+          total_answer += 1;
+        }
+        else{
+          show_answer += "_";
+        }
+      }
+      else if(answer[i] == "j"){
+        if ("{{object.button_status.j}}" == "True"){
+          console.log(answer[i] + " is True, button pressed, show Text");
+          show_answer += answer[i];
+          total_answer += 1;
+        }
+        else{
+          show_answer += "_";
+        }
+      }
+      else if(answer[i] == "k"){
+        if ("{{object.button_status.k}}" == "True"){
+          console.log(answer[i] + " is True, button pressed, show Text");
+          show_answer += answer[i];
+          total_answer += 1;
+        }
+        else{
+          show_answer += "_";
+        }
+      }
+      else if(answer[i] == "l"){
+        if ("{{object.button_status.l}}" == "True"){
+          console.log(answer[i] + " is True, button pressed, show Text");
+          show_answer += answer[i];
+          total_answer += 1;
+        }
+        else{
+          show_answer += "_";
+        }
+      }
+      else if(answer[i] == "m"){
+        if ("{{object.button_status.m}}" == "True"){
+          console.log(answer[i] + " is True, button pressed, show Text");
+          show_answer += answer[i];
+          total_answer += 1;
+        }
+        else{
+          show_answer += "_";
+        }
+      }
+      else if(answer[i] == "n"){
+        if ("{{object.button_status.n}}" == "True"){
+          console.log(answer[i] + " is True, button pressed, show Text");
+          show_answer += answer[i];
+          total_answer += 1;
+        }
+        else{
+          show_answer += "_";
+        }
+      }
+      else if(answer[i] == "o"){
+        if ("{{object.button_status.o}}" == "True"){
+          console.log(answer[i] + " is True, button pressed, show Text");
+          show_answer += answer[i];
+          total_answer += 1;
+        }
+        else{
+          show_answer += "_";
+        }
+      }
+      else if(answer[i] == "p"){
+        if ("{{object.button_status.p}}" == "True"){
+          console.log(answer[i] + " is True, button pressed, show Text");
+          show_answer += answer[i];
+          total_answer += 1;
+        }
+        else{
+          show_answer += "_";
+        }
+      }
+      else if(answer[i] == "q"){
+        if ("{{object.button_status.q}}" == "True"){
+          console.log(answer[i] + " is True, button pressed, show Text");
+          show_answer += answer[i];
+          total_answer += 1;
+        }
+        else{
+          show_answer += "_";
+        }
+      }
+      else if(answer[i] == "r"){
+        if ("{{object.button_status.r}}" == "True"){
+          console.log(answer[i] + " is True, button pressed, show Text");
+          show_answer += answer[i];
+          total_answer += 1;
+        }
+        else{
+          show_answer += "_";
+        }
+      }
+      else if(answer[i] == "s"){
+        if ("{{object.button_status.s}}" == "True"){
+          console.log(answer[i] + " is True, button pressed, show Text");
+          show_answer += answer[i];
+          total_answer += 1;
+        }
+        else{
+          show_answer += "_";
+        }
+      }
+      else if(answer[i] == "t"){
+        if ("{{object.button_status.t}}" == "True"){
+          console.log(answer[i] + " is True, button pressed, show Text");
+          show_answer += answer[i];
+          total_answer += 1;
+        }
+        else{
+          show_answer += "_";
+        }
+      }
+      else if(answer[i] == "u"){
+        if ("{{object.button_status.u}}" == "True"){
+          console.log(answer[i] + " is True, button pressed, show Text");
+          show_answer += answer[i];
+          total_answer += 1;
+        }
+        else{
+          show_answer += "_";
+        }
+      }
+      else if(answer[i] == "v"){
+        if ("{{object.button_status.v}}" == "True"){
+          console.log(answer[i] + " is True, button pressed, show Text");
+          show_answer += answer[i];
+          total_answer += 1;
+        }
+        else{
+          show_answer += "_";
+        }
+      }
+      else if(answer[i] == "w"){
+        if ("{{object.button_status.w}}" == "True"){
+          console.log(answer[i] + " is True, button pressed, show Text");
+          show_answer += answer[i];
+          total_answer += 1;
+        }
+        else{
+          show_answer += "_";
+        }
+      }
+      else if(answer[i] == "x"){
+        if ("{{object.button_status.x}}" == "True"){
+          console.log(answer[i] + " is True, button pressed, show Text");
+          show_answer += answer[i];
+          total_answer += 1;
+        }
+        else{
+          show_answer += "_";
+        }
+      }
+      else if(answer[i] == "y"){
+        if ("{{object.button_status.y}}" == "True"){
+          console.log(answer[i] + " is True, button pressed, show Text");
+          show_answer += answer[i];
+          total_answer += 1;
+        }
+        else{
+          show_answer += "_";
+        }
+      }
+      else if(answer[i] == "z"){
+        if ("{{object.button_status.z}}" == "True"){
+          console.log(answer[i] + " is True, button pressed, show Text");
+          show_answer += answer[i];
+          total_answer += 1;
+        }
+        else{
+          show_answer += "_";
+        }
+      }
+      
+    }
     
+    
+    var pk = "{{object.id}}";
+    let finished = "False";
+    
+    if(total_answer == answer.length){
+      finished = "True";
+    }
+    let param_ = {
+        "pk" : pk,
+        "finished" : finished,
+      }
+    $.ajax({
+    url : "{% url 'game_check' %}",
+    type : 'POST',
+    headers : {
+      'X-CSRFTOKEN' : '{{ csrf_token }}'
+    },
+    data : JSON.stringify(param_),
+    success:function(data){
+      // console.log(data);
+      location.reload();
+    },
+    error: function(){
+      alert('에러가 발생했습니다 : ');
+    }
+    });
   }
-
+  function hideText_withoutSend() {
+    let answer = "{{object.answer}}";
+    console.log("answer : {{object.answer}}, answer_text : " + answer, " , type : " + typeof(answer));
+    let show_answer = "";
+    let total_answer = 0;
+    for(let i = 0; i < answer.length; i++){
+      console.log(answer[i]);
+      if(answer[i] == "a"){
+        if ("{{object.button_status.a}}" == "True"){
+          console.log(answer[i] + " is True, button pressed, show Text");
+          show_answer += answer[i];
+          total_answer += 1;
+        }
+        else{
+          show_answer += "_";
+        }
+      }
+      else if(answer[i] == "b"){
+        if ("{{object.button_status.b}}" == "True"){
+          console.log(answer[i] + " is True, button pressed, show Text");
+          show_answer += answer[i];
+          total_answer += 1;
+        }
+        else{
+          show_answer += "_";
+        }
+      }
+      else if(answer[i] == "c"){
+        if ("{{object.button_status.c}}" == "True"){
+          console.log(answer[i] + " is True, button pressed, show Text");
+          show_answer += answer[i];
+          total_answer += 1;
+        }
+        else{
+          show_answer += "_";
+        }
+      }
+      else if(answer[i] == "d"){
+        if ("{{object.button_status.d}}" == "True"){
+          console.log(answer[i] + " is True, button pressed, show Text");
+          show_answer += answer[i];
+          total_answer += 1;
+        }
+        else{
+          show_answer += "_";
+        }
+      }
+      else if(answer[i] == "e"){
+        if ("{{object.button_status.e}}" == "True"){
+          console.log(answer[i] + " is True, button pressed, show Text");
+          show_answer += answer[i];
+          total_answer += 1;
+        }
+        else{
+          show_answer += "_";
+        }
+      }
+      else if(answer[i] == "f"){
+        if ("{{object.button_status.f}}" == "True"){
+          console.log(answer[i] + " is True, button pressed, show Text");
+          show_answer += answer[i];
+          total_answer += 1;
+        }
+        else{
+          show_answer += "_";
+        }
+      }
+      else if(answer[i] == "g"){
+        if ("{{object.button_status.g}}" == "True"){
+          console.log(answer[i] + " is True, button pressed, show Text");
+          show_answer += answer[i];
+          total_answer += 1;
+        }
+        else{
+          show_answer += "_";
+        }
+      }
+      else if(answer[i] == "h"){
+        if ("{{object.button_status.h}}" == "True"){
+          console.log(answer[i] + " is True, button pressed, show Text");
+          show_answer += answer[i];
+          total_answer += 1;
+        }
+        else{
+          show_answer += "_";
+        }
+      }
+      else if(answer[i] == "i"){
+        if ("{{object.button_status.i}}" == "True"){
+          console.log(answer[i] + " is True, button pressed, show Text");
+          show_answer += answer[i];
+          total_answer += 1;
+        }
+        else{
+          show_answer += "_";
+        }
+      }
+      else if(answer[i] == "j"){
+        if ("{{object.button_status.j}}" == "True"){
+          console.log(answer[i] + " is True, button pressed, show Text");
+          show_answer += answer[i];
+          total_answer += 1;
+        }
+        else{
+          show_answer += "_";
+        }
+      }
+      else if(answer[i] == "k"){
+        if ("{{object.button_status.k}}" == "True"){
+          console.log(answer[i] + " is True, button pressed, show Text");
+          show_answer += answer[i];
+          total_answer += 1;
+        }
+        else{
+          show_answer += "_";
+        }
+      }
+      else if(answer[i] == "l"){
+        if ("{{object.button_status.l}}" == "True"){
+          console.log(answer[i] + " is True, button pressed, show Text");
+          show_answer += answer[i];
+          total_answer += 1;
+        }
+        else{
+          show_answer += "_";
+        }
+      }
+      else if(answer[i] == "m"){
+        if ("{{object.button_status.m}}" == "True"){
+          console.log(answer[i] + " is True, button pressed, show Text");
+          show_answer += answer[i];
+          total_answer += 1;
+        }
+        else{
+          show_answer += "_";
+        }
+      }
+      else if(answer[i] == "n"){
+        if ("{{object.button_status.n}}" == "True"){
+          console.log(answer[i] + " is True, button pressed, show Text");
+          show_answer += answer[i];
+          total_answer += 1;
+        }
+        else{
+          show_answer += "_";
+        }
+      }
+      else if(answer[i] == "o"){
+        if ("{{object.button_status.o}}" == "True"){
+          console.log(answer[i] + " is True, button pressed, show Text");
+          show_answer += answer[i];
+          total_answer += 1;
+        }
+        else{
+          show_answer += "_";
+        }
+      }
+      else if(answer[i] == "p"){
+        if ("{{object.button_status.p}}" == "True"){
+          console.log(answer[i] + " is True, button pressed, show Text");
+          show_answer += answer[i];
+          total_answer += 1;
+        }
+        else{
+          show_answer += "_";
+        }
+      }
+      else if(answer[i] == "q"){
+        if ("{{object.button_status.q}}" == "True"){
+          console.log(answer[i] + " is True, button pressed, show Text");
+          show_answer += answer[i];
+          total_answer += 1;
+        }
+        else{
+          show_answer += "_";
+        }
+      }
+      else if(answer[i] == "r"){
+        if ("{{object.button_status.r}}" == "True"){
+          console.log(answer[i] + " is True, button pressed, show Text");
+          show_answer += answer[i];
+          total_answer += 1;
+        }
+        else{
+          show_answer += "_";
+        }
+      }
+      else if(answer[i] == "s"){
+        if ("{{object.button_status.s}}" == "True"){
+          console.log(answer[i] + " is True, button pressed, show Text");
+          show_answer += answer[i];
+          total_answer += 1;
+        }
+        else{
+          show_answer += "_";
+        }
+      }
+      else if(answer[i] == "t"){
+        if ("{{object.button_status.t}}" == "True"){
+          console.log(answer[i] + " is True, button pressed, show Text");
+          show_answer += answer[i];
+          total_answer += 1;
+        }
+        else{
+          show_answer += "_";
+        }
+      }
+      else if(answer[i] == "u"){
+        if ("{{object.button_status.u}}" == "True"){
+          console.log(answer[i] + " is True, button pressed, show Text");
+          show_answer += answer[i];
+          total_answer += 1;
+        }
+        else{
+          show_answer += "_";
+        }
+      }
+      else if(answer[i] == "v"){
+        if ("{{object.button_status.v}}" == "True"){
+          console.log(answer[i] + " is True, button pressed, show Text");
+          show_answer += answer[i];
+          total_answer += 1;
+        }
+        else{
+          show_answer += "_";
+        }
+      }
+      else if(answer[i] == "w"){
+        if ("{{object.button_status.w}}" == "True"){
+          console.log(answer[i] + " is True, button pressed, show Text");
+          show_answer += answer[i];
+          total_answer += 1;
+        }
+        else{
+          show_answer += "_";
+        }
+      }
+      else if(answer[i] == "x"){
+        if ("{{object.button_status.x}}" == "True"){
+          console.log(answer[i] + " is True, button pressed, show Text");
+          show_answer += answer[i];
+          total_answer += 1;
+        }
+        else{
+          show_answer += "_";
+        }
+      }
+      else if(answer[i] == "y"){
+        if ("{{object.button_status.y}}" == "True"){
+          console.log(answer[i] + " is True, button pressed, show Text");
+          show_answer += answer[i];
+          total_answer += 1;
+        }
+        else{
+          show_answer += "_";
+        }
+      }
+      else if(answer[i] == "z"){
+        if ("{{object.button_status.z}}" == "True"){
+          console.log(answer[i] + " is True, button pressed, show Text");
+          show_answer += answer[i];
+          total_answer += 1;
+        }
+        else{
+          show_answer += "_";
+        }
+      }
+      
+    }
+    console.log(show_answer);
+    $("#answer_text").text(show_answer);
+  }
   function sendData(event) {
     console.log("{{object.id}}, " + $(this).val());
     let pressed_value = $(this).attr('value');
     var pk = "{{object.id}}";
     // let pk = 'game_id'.replace('game_id', object.id);
+    let failed = "True";
+    let temp_text = "{{object.answer}}";
+    console.log(temp_text);
+    for(let k = 0; k < temp_text.length; k++){
+      if (temp_text[k] == pressed_value){
+        failed = "False";
+      }
+    }
+    console.log(failed);
     let param = {
       "pk" : pk,
+      "failed" : failed,
       "pressed_value" : pressed_value,
     }
     console.log("pk : " + pk);
@@ -375,7 +944,9 @@
     });
   }
 
-  
+  window.onload = function() {
+    hideText_withoutSend();
+  }
 
 </script>
 

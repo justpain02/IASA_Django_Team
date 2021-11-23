@@ -15,4 +15,5 @@ urlpatterns = [
     path('join/<int:Game_id>/', join ,name='join'),
     path('delete/<int:pk>/',Gamedelete.as_view(),name='delete'),
     url(r'^game_button/$', about_button_status, name="game_button"),
+    url(r'^game_check/$', game_check, name="game_check"),
 ]
