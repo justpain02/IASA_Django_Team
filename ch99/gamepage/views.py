@@ -1,3 +1,4 @@
+from django.http.response import JsonResponse
 from django.shortcuts import redirect, render
 from typing import ClassVar
 from django.views.generic.base import TemplateView
@@ -11,6 +12,8 @@ from .models import Game
 from django.shortcuts import get_object_or_404
 from django.contrib.auth.decorators import login_required
 from django.http import HttpResponse , HttpResponseRedirect
+from django.views.decorators.http import require_POST
+import json
 #--- TemplateView
 class MainpageView(DetailView):
     model = Game
@@ -49,7 +52,28 @@ class Gamedelete(DeleteView):
     model = Game
     template_name_suffix='_delete'
     success_url= reverse_lazy('list')
-        
+
+def give_word_status(request, pk):
+    game = Game.objects.get(pk=pk)
+    return render(request, 'gamepage/game_textpart.html', {'game' : game})
+
+@login_required
+@require_POST
+def about_button_status(request):
+    jsonObject = json.loads(request.body)
+    pk = jsonObject.get('pk')
+    print(pk)
+    game = get_object_or_404(Game, pk=pk)
+    print(game.button_status)
+    print(jsonObject.get('pressed_value'))
+    print(type(game.button_status))
+    game.button_status.update({jsonObject.get('pressed_value') : True})
+    # Game.objects.filter(pk=int(jsonObject.get('pressed_value'))).update()
+    print(game.button_status)
+    game.save()
+    return redirect(f'/gamepage/mainpage/{pk}/')
+
+    
 @login_required
 def join(request, Game_id):
     game = get_object_or_404(Game, id=Game_id)
