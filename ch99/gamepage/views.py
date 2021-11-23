@@ -83,7 +83,3 @@ def join(request, Game_id):
     else:
         game.people_num.add(request.user)
         return redirect(f'/gamepage/ready/{Game_id}/')
-    
-
-
-    

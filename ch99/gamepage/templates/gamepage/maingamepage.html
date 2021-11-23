@@ -102,59 +102,166 @@
   <section>
     <article1>
 
-      <h2>정답 칸</h2>
-      <h2></h2>
+      <h2 id="answer_text">정답 칸</h2>
     </article1>
 
     <article2>
       
     <div id="btn_group">
       {% if not object.button_status.a %}
-      <button id="test_btn1" class="btnAjax_a" value="a">a</button>
+        <button id="test_btn1" class="btnAjax_a" value="a">a</button>
       {% else %}
-      <button id="test_btn1" class="btnAjax_a" value="a" disabled>a</button>
+        <button id="test_btn1" class="btnAjax_a" value="a" disabled>a</button>
       {% endif %}
+
       {% if not object.button_status.b %}
-      <button id="test_btn1" class="btnAjax_b" value="b">b</button>
+        <button id="test_btn1" class="btnAjax_b" value="b">b</button>
       {% else %}
-      <button id="test_btn1" class="btnAjax_b" value="b" disabled>b</button>
+        <button id="test_btn1" class="btnAjax_b" value="b" disabled>b</button>
       {% endif %}
+      
       {% if not object.button_status.c %}
-      <button id="test_btn1" class="btnAjax_c" value="c">c</button>
+        <button id="test_btn1" class="btnAjax_c" value="c">c</button>
       {% else %}
-      <button id="test_btn1" class="btnAjax_c" value="c" disabled>c</button>
+        <button id="test_btn1" class="btnAjax_c" value="c" disabled>c</button>
       {% endif %}
+      
       {% if not object.button_status.d %}
-      <button id="test_btn1" class="btnAjax_d" value="d">d</button>
+        <button id="test_btn1" class="btnAjax_d" value="d">d</button>
       {% else %}
-      <button id="test_btn1" class="btnAjax_d" value="d" disabled>d</button>
+        <button id="test_btn1" class="btnAjax_d" value="d" disabled>d</button>
       {% endif %}
-      {% if not object.button_status.c %}
-      <button id="test_btn1" class="btnAjax_e" value="e">e</button>
+      
+      {% if not object.button_status.e %}
+        <button id="test_btn1" class="btnAjax_e" value="e">e</button>
       {% else %}
-      <button id="test_btn1" class="btnAjax_e" value="e" disabled>e</button>
+        <button id="test_btn1" class="btnAjax_e" value="e" disabled>e</button>
       {% endif %}
-      <button id="test_btn1" class="btnAjax_f" value="f">f</button>
-      <button id="test_btn1" class="btnAjax_g" value="g">g</button>
-      <button id="test_btn1" class="btnAjax_h" value="h">h</button>
-      <button id="test_btn1" class="btnAjax_i" value="i">i</button>
+      
+      {% if not object.button_status.f %}
+        <button id="test_btn1" class="btnAjax_f" value="f">f</button>
+      {% else %}
+        <button id="test_btn1" class="btnAjax_f" value="f" disabled>f</button>
+      {% endif %}
+      
+      {% if not object.button_status.g %}
+        <button id="test_btn1" class="btnAjax_g" value="g">g</button>
+      {% else %}
+        <button id="test_btn1" class="btnAjax_g" value="g">g</button>
+      {% endif %}
+      
+      {% if not object.button_status.h %}
+        <button id="test_btn1" class="btnAjax_h" value="h">h</button>
+      {% else %}
+        <button id="test_btn1" class="btnAjax_h" value="h" disabled>h</button>
+      {% endif %}
+      
+      {% if not object.button_status.i %}
+        <button id="test_btn1" class="btnAjax_i" value="i">i</button>
+      {% else %}
+        <button id="test_btn1" class="btnAjax_i" value="i" disabled>i</button>
+      {% endif %}
+      
+      {% if not object.button_status.j %}
+      {% else %}
+      {% endif %}
       <button id="test_btn1" class="btnAjax_j" value="j">j</button>
-      <button id="test_btn1" class="btnAjax_k" value="k">k</button>
-      <button id="test_btn1" class="btnAjax_l" value="l">l</button>
-      <button id="test_btn1" class="btnAjax_m" value="m">m</button>
-      <button id="test_btn1" class="btnAjax_n" value="n">n</button>
-      <button id="test_btn1" class="btnAjax_o" value="o">o</button>
-      <button id="test_btn1" class="btnAjax_p" value="p">p</button>
+      
+      {% if not object.button_status.k %}
+        <button id="test_btn1" class="btnAjax_k" value="k">k</button>
+      {% else %}
+        <button id="test_btn1" class="btnAjax_k" value="k" disabled>k</button>
+      {% endif %}
+
+      {% if not object.button_status.l %}
+        <button id="test_btn1" class="btnAjax_l" value="l">l</button>
+      {% else %}
+        <button id="test_btn1" class="btnAjax_l" value="l" disabled>l</button>
+      {% endif %}
+      
+      {% if not object.button_status.m %}
+        <button id="test_btn1" class="btnAjax_m" value="m">m</button>
+      {% else %}
+        <button id="test_btn1" class="btnAjax_m" value="m" disabled>m</button>
+      {% endif %}
+      
+      {% if not object.button_status.n %}
+        <button id="test_btn1" class="btnAjax_n" value="n">n</button>
+      {% else %}
+        <button id="test_btn1" class="btnAjax_n" value="n" disabled>n</button>
+      {% endif %}
+
+      {% if not object.button_status.o %}
+        <button id="test_btn1" class="btnAjax_o" value="o">o</button>
+      {% else %}
+        <button id="test_btn1" class="btnAjax_o" value="o" disabled>o</button>
+      {% endif %}
+
+      {% if not object.button_status.p %}
+        <button id="test_btn1" class="btnAjax_p" value="p">p</button>
+      {% else %}
+        <button id="test_btn1" class="btnAjax_p" value="p" disabled>p</button>
+      {% endif %}
+      
+      {% if not object.button_status.q %}
       <button id="test_btn1" class="btnAjax_q" value="q">q</button>
-      <button id="test_btn1" class="btnAjax_r" value="r">r</button>
+      {% else %}
+      <button id="test_btn1" class="btnAjax_q" value="q" disabled>q</button>
+      {% endif %}
+      
+      {% if not object.button_status.r %}
+        <button id="test_btn1" class="btnAjax_r" value="r">r</button>
+      {% else %}
+        <button id="test_btn1" class="btnAjax_r" value="r" disabled>r</button>
+      {% endif %}
+      
+      {% if not object.button_status.s %}
       <button id="test_btn1" class="btnAjax_s" value="s">s</button>
-      <button id="test_btn1" class="btnAjax_t" value="t">t</button>
-      <button id="test_btn1" class="btnAjax_u" value="u">u</button>
-      <button id="test_btn1" class="btnAjax_v" value="v">v</button>
-      <button id="test_btn1" class="btnAjax_w" value="w">w</button>
-      <button id="test_btn1" class="btnAjax_x" value="x">x</button>
-      <button id="test_btn1" class="btnAjax_y" value="y">y</button>
-      <button id="test_btn1" class="btnAjax_z" value="z">z</button>
+      {% else %}
+      <button id="test_btn1" class="btnAjax_s" value="s" disabled>s</button>
+      {% endif %}
+      
+      {% if not object.button_status.t %}
+        <button id="test_btn1" class="btnAjax_t" value="t">t</button>
+      {% else %}
+        <button id="test_btn1" class="btnAjax_t" value="t" disabled>t</button>
+      {% endif %}
+      
+      {% if not object.button_status.u %}
+        <button id="test_btn1" class="btnAjax_u" value="u">u</button>
+      {% else %}
+        <button id="test_btn1" class="btnAjax_u" value="u" disabled>u</button>
+      {% endif %}
+      
+      {% if not object.button_status.v %}
+        <button id="test_btn1" class="btnAjax_v" value="v">v</button>
+      {% else %}
+        <button id="test_btn1" class="btnAjax_v" value="v" disabled>v</button>
+      {% endif %}
+      
+      {% if not object.button_status.w %}
+        <button id="test_btn1" class="btnAjax_w" value="w">w</button>
+      {% else %}
+        <button id="test_btn1" class="btnAjax_w" value="w" disabled>w</button>
+      {% endif %}
+      
+      {% if not object.button_status.x %}
+        <button id="test_btn1" class="btnAjax_x" value="x">x</button>
+      {% else %}
+        <button id="test_btn1" class="btnAjax_x" value="x" disabled>x</button>
+      {% endif %}
+      
+      {% if not object.button_status.y %}
+        <button id="test_btn1" class="btnAjax_y" value="y">y</button>
+      {% else %}
+        <button id="test_btn1" class="btnAjax_y" value="y" disabled>y</button>
+      {% endif %}
+      
+      {% if not object.button_status.z %}
+        <button id="test_btn1" class="btnAjax_z" value="z">z</button>
+      {% else %}
+        <button id="test_btn1" class="btnAjax_z" value="z" disabled>z</button>
+      {% endif %}
       
     </div>  
     </article2>
@@ -231,6 +338,8 @@
   btnAjax_y.addEventListener('click', sendData);
   btnAjax_z.addEventListener('click', sendData);
   
+  
+
   function sendData(event) {
     console.log("{{object.id}}, " + $(this).val());
     let pressed_value = $(this).attr('value');
