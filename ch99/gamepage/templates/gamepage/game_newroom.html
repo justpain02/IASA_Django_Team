@@ -1,5 +1,9 @@
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'gamepage/button.css' %}">
 <form action="" method="POST" autocomplete="off">
-    {% csrf_token %}
-    {{form.as_p}}
-    <input type="submit" value="Add" class="">
+    <div style="width: 500px; height: 350px; margin: 0 auto; margin-top: 100px; background-color: blanchedalmond; text-align: center; padding-top: 50px; font-family: 'WandohopeB'; font-size: 30px;">
+        {% csrf_token %}
+        {{form.as_p}}
+        <input type="submit" value="Add" class="btn btn-4" style="width: 75px; height: 31px; font-size: 20px;">
+    </div>
 </form>
