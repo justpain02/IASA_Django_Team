@@ -639,6 +639,7 @@
   }
   function hideText_withoutSend() {
     let answer = "{{object.answer}}";
+    var pk = "{{object.id}}";
     console.log("answer : {{object.answer}}, answer_text : " + answer, " , type : " + typeof(answer));
     let show_answer = "";
     let total_answer = 0;
@@ -908,6 +909,16 @@
     }
     console.log(show_answer);
     $("#answer_text").text(show_answer);
+    let game_finished_temp = "{{object.game_finished}}";
+    console.log(game_finished_temp, typeof(game_finished_temp));
+    let game_finished = Number(game_finished_temp);
+    console.log(game_finished, typeof(game_finished));
+    if(game_finished === 2){
+      window.location.href="{% url 'fail' pk=object.id %}";
+    }
+    else if(game_finished === 1){
+      window.location.href="{% url 'success' pk=object.id %}";
+    }
   }
   function sendData(event) {
     console.log("{{object.id}}, " + $(this).val());
