@@ -40,7 +40,7 @@
                 <button class="nbut"><a href=/gamepage>게임 선택</a></button>
                 {% if user.is_active %}
                 <button class="nbut"><a href="{% url 'logout' %}">Logout</a></button>
-                <button class="nbut"><a href="{% url 'profile' pk=user.id %}">Mypage</a></button>ah
+                <button class="nbut"><a href="{% url 'profile' pk=user.id %}">Mypage</a></button>
                 <a style="font-family: 'Dancing Script', cursive; font-size: 30px;"><i class="fas fa-user"></i>&ensp;{% firstof user.get_short_name user.get_username %}&ensp;</a>
                 
                 

@@ -1,0 +1,62 @@
+@font-face {
+    font-family: 'WandohopeB';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-10@1.0/WandohopeB.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+.box{
+    width: 300px;
+    height: 300px;
+    background-color: red;
+    display: inline-block;
+    margin-left: 20px;
+    margin-top: 0;
+    text-align: center;
+}
+.line{
+    margin-top: 20px;
+    height: 335px;
+    width: 1320px;
+    overflow: hidden;
+    padding-top: 20px;
+}
+.username{
+    position: absolute;
+    height: 40px;
+    width: 300px;
+    background-color: rgb(165, 133, 109);
+    margin-top: -30;
+    font-family: 'WandohopeB';
+    font-size:30px;
+    padding-top: 8px;
+    z-index: 100;
+}
+.img-back{
+    width: 300px;
+    height: 300px;
+    background-color: rgb(216, 168, 168);
+    overflow: hidden;
+}
+.images{
+    border: black solid 2px;
+    width: 296px;
+}
+.x{
+    text-decoration: none;
+    border-radius: 10px;
+    padding-top: 15px;
+    display: inline-block;
+    float: right;
+}
+.body{
+    width: 1320px;
+    height: 900px;
+}
+.text{
+    font-size: 20px;
+    padding-left: 20px;
+    padding-top: 20px;
+}
+body{
+    background-color: rgb(255, 255, 255);
+}
