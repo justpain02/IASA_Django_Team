@@ -20,7 +20,7 @@
 <div class="box">
     {% load static %}
     {% if user_profile.profile.profile_photo %}
-    <div class="img-back"><img src="{{user_profile.profile_photo.url}}" class="images"></div>
+    <div class="img-back"><img src="{{user_profile.profile.profile_photo.url}}" class="images"></div>
     {% else %}
     <div class="img-back"><img src="{% static 'base/images/img.jpg' %}" class="images"></div>
     {% endif %}
